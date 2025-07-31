@@ -2,12 +2,13 @@
   "name": "Zolar",
   "version":"0.99",
   "new_install_improv_wait_time":20,
+  "new_install_prompt_erase": true,
   "builds": [
     {
       "chipFamily":"ESP32-S3",
+      "improv": false,
       "parts": [
-        { "path": "firmware.bin", "offset": 65536 },
-        { "path": "littlefs.bin", "offset": 6356992 }        
+        { "path": "zolar.bin", "offset": 0 }
       ]      
     }
   ]
