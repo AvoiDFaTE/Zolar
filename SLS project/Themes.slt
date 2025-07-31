@@ -1,0 +1,58 @@
+{
+  "deftheme": {
+    "name": "Default",
+    "properties": [
+      {
+        "nid": 1000628,
+        "strtype": "THEME_COLOR",
+        "strval": "Black",
+        "intarray": [
+          0,
+          0,
+          0,
+          255
+        ],
+        "InheritedType": 0
+      }
+    ]
+  },
+  "themes": [
+    {
+      "name": "Dark",
+      "properties": [
+        {
+          "nid": 1000628,
+          "flags": 2097152,
+          "strtype": "THEME_COLOR",
+          "strval": "Black",
+          "intarray": [
+            0,
+            0,
+            0,
+            255
+          ],
+          "InheritedType": 0
+        }
+      ]
+    },
+    {
+      "name": "Light",
+      "properties": [
+        {
+          "nid": 1000628,
+          "flags": 2097152,
+          "strtype": "THEME_COLOR",
+          "strval": "Black",
+          "intarray": [
+            0,
+            0,
+            0,
+            255
+          ],
+          "InheritedType": 0
+        }
+      ]
+    }
+  ],
+  "selected_theme": "Dark"
+}
