@@ -6,7 +6,8 @@
     {
       "chipFamily":"ESP32-S3",
       "parts": [
-        { "path": "firmware.bin", "offset": 65536 }
+        { "path": "firmware.bin", "offset": 65536 },
+        { "path": "littlefs.bin", "offset": 6356992 }        
       ]      
     }
   ]
