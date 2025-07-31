@@ -2,7 +2,29 @@
 <html>
 <body>
     <h1>Flash zolar</h1>
-    <script type="module" src="https://unpkg.com/tasmota-esp-web-tools@8.1.4/dist/web/install-button.js?module"></script>
+    <script module>
+        // https://unpkg.com/esp-web-tools@10.0.1/dist/web/install-button.js?module
+        // https://unpkg.com/tasmota-esp-web-tools@8.1.2/dist/web/install-button.js?module
+        // https://unpkg.com/tasmota-esp-web-tools/dist/web/install-button.js?module
+        import(
+            "https://unpkg.com/tasmota-esp-web-tools@8.1.4/dist/web/install-button.js?module"
+            );
+        window.addEventListener("load", function (event) {
+            try {
+                const button = document.querySelector("esp-web-install-button");
+                button.overrides = {
+                    checkSameFirmware(manifest, improvInfo) {
+                        const manifestFirmware = manifest.name.toLowerCase();
+                        const deviceFirmware = improvInfo.firmware.toLowerCase();
+                        return true;
+                    }
+                };
+            } catch (e) {
+                console.log(e);
+            }
+        }, {once: true});
+    </script>
+    
     <esp-web-install-button manifest="build/manifest.json"></esp-web-install-button>
 </body>
 </html>
